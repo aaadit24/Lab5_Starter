@@ -1,5 +1,5 @@
 // expose.js
-
+import JSConfetti from 'js-confetti'
 window.addEventListener('DOMContentLoaded', init);
 
 function init() {
@@ -48,6 +48,7 @@ function init() {
 
   function playSound() {
     audio.play();
+    jsConfetti.addConfetti();
 }
 
 }
