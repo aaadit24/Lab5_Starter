@@ -48,8 +48,8 @@ function init() {
   function playSound() {
     audio.play();
     if (horn_select.value == "party-horn"){
-      const jsConfetti = new JSConfetti()
-      jsConfetti.addConfetti()
+      const jsConfetti = new JSConfetti();
+      jsConfetti.addConfetti();
     }
   }
 
