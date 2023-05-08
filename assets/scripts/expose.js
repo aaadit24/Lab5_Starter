@@ -20,7 +20,7 @@ function init() {
 
     // Update the image and audio file based on the selected horn
     const horn_image = document.querySelector('section img');
-    const horn_sound = `./assets/audio/${selectedHorn}.mp3`;
+    const horn_sound = `/assets/audio/${selectedHorn}.mp3`;
 
     horn_image.setAttribute('src', `/assets/images/${selectedHorn}.svg`);
     audio.setAttribute('src', horn_sound);
