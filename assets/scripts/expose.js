@@ -1,7 +1,6 @@
 // expose.js
-
 window.addEventListener('DOMContentLoaded', init);
-
+const jsConfetti = new JSConfetti();
 function init() {
   // Get necessary elements from the HTML DOM
   const horn_select = document.querySelector('#horn-select');
@@ -48,6 +47,9 @@ function init() {
 
   function playSound() {
     audio.play();
-}
+    if (horn_select.value == "party-horn"){
+      jsConfetti.addConfetti();
+    }
+  }
 
 }
