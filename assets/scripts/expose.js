@@ -31,12 +31,16 @@ function init() {
 
     // Update the volume icon displayed on the page
     const volumeIcon = document.querySelector('#volume-controls img');
+    audio.volume =  selectedVolume/100;
     if (selectedVolume == 0) {
       volumeIcon.setAttribute('src', `./assets/icons/volume-level-0.svg`);
+      
     } else if (selectedVolume >= 1 && selectedVolume <= 33) {
       volumeIcon.setAttribute('src', `./assets/icons/volume-level-1.svg`);
+
     } else if (selectedVolume >= 34 && selectedVolume <= 66) {
       volumeIcon.setAttribute('src', `./assets/icons/volume-level-2.svg`);
+
     } else {
       volumeIcon.setAttribute('src', `./assets/icons/volume-level-3.svg`);
     }
