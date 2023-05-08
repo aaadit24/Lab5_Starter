@@ -5,6 +5,7 @@ window.addEventListener('DOMContentLoaded', function() {
     var textToSpeak = document.querySelector("#text-to-speak");
     var smilingFace = document.querySelector("img[src='assets/images/smiling.png']");
     var openMouthFace = document.querySelector("img[src='assets/images/open-mouth.png']");
+    var voices = [];
   
     function populateVoiceList() {
       voices = synth.getVoices();
@@ -26,7 +27,6 @@ window.addEventListener('DOMContentLoaded', function() {
       }
   
       var utterThis = new SpeechSynthesisUtterance(textToSpeak.value);
-      var voices = synth.getVoices();
       for (var i = 0; i < voices.length; i++) {
         if (voices[i].name === voiceSelect.value) {
           utterThis.voice = voices[i];
