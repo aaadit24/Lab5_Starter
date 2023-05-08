@@ -35,12 +35,12 @@ window.addEventListener('DOMContentLoaded', function() {
       }
       synth.speak(utterThis);
   
-      smilingFace.style.display = "none";
-      openMouthFace.style.display = "block";
+      smilingFace.style.display = "assets/images/smiling.png";
+      openMouthFace.style.display = "assets/images/open-mouth.png";
   
       utterThis.onend = function(event) {
-        smilingFace.style.display = "block";
-        openMouthFace.style.display = "none";
+        smilingFace.style.display = "assets/images/smiling.png";
+        openMouthFace.style.display = "assets/images/open-mouth.png";
       };
   
       utterThis.onerror = function(event) {
