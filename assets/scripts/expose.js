@@ -49,6 +49,6 @@ function init() {
   function playSound() {
     audio.play();
     jsConfetti.addConfetti();
-}
+  }
 
 }
