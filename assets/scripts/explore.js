@@ -86,7 +86,7 @@ window.addEventListener('DOMContentLoaded', function() {
       }
       synth.speak(utterThis);
       smilling.src = "assets/images/smiling-open.png";
-      say.addEventListener("end", function () {
+      utterThis.addEventListener("end", function () {
         console.log(speechSynthesis.speaking);
         smilling.src = "assets/images/smiling.png";
       });
