@@ -3,8 +3,8 @@ window.addEventListener('DOMContentLoaded', function() {
     var voiceSelect = document.querySelector("#voice-select");
     var speakBtn = document.querySelector("button");
     var textToSpeak = document.querySelector("#text-to-speak");
-    var smilingFace = document.querySelector("img[src='assets/images/smiling.png']");
-    var openMouthFace = document.querySelector("img[src='assets/images/open-mouth.png']");
+    var smilingFace = document.querySelector("img[src='./assets/images/smiling.png']");
+    var openMouthFace = document.querySelector("img[src='./assets/images/open-mouth.png']");
     var voices = [];
   
     function populateVoiceList() {
