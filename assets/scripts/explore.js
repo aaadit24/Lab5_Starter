@@ -88,7 +88,7 @@ window.addEventListener('DOMContentLoaded', function() {
       smilling.src = "assets/images/smiling-open.png";
       say.addEventListener("end", function () {
         console.log(speechSynthesis.speaking);
-        smiley.src = "assets/images/smiling.png";
+        smilling.src = "assets/images/smiling.png";
       });
   
       utterThis.onerror = function(event) {
