@@ -4,7 +4,7 @@ window.addEventListener('DOMContentLoaded', function() {
     var button = document.querySelector("button");
     var text_to_speak = document.querySelector("#text_to_speak");
     var smilling = document.querySelector("img[src='./assets/images/smiling.png']");
-    var open_mouth = document.querySelector("img[src='./assets/images/open-mouth.png']");
+    var open_mouth = document.querySelector("img[src='./assets/images/smiling-open.png']");
     var voices = [];
   
     function populateVoiceList() {
@@ -35,12 +35,12 @@ window.addEventListener('DOMContentLoaded', function() {
       }
       synth.speak(utterThis);
   
-      smilling.style.display = "assets/images/smiling.png";
-      open_mouth.style.display = "assets/images/open-mouth.png";
+      smilling.style.display = "none";
+      open_mouth.style.display = "block";
   
       utterThis.onend = function(event) {
-        smilling.style.display = "assets/images/smiling.png";
-        open_mouth.style.display = "assets/images/open-mouth.png";
+        smilling.style.display = "block";
+        open_mouth.style.display = "none";
       };
   
       utterThis.onerror = function(event) {
