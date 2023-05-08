@@ -22,7 +22,7 @@ function init() {
     const horn_image = document.querySelector('section img');
     const horn_sound = `./assets/audio/${selectedHorn}.mp3`;
 
-    horn_image.setAttribute('src', `./assets/images/$a.svg`);
+    horn_image.setAttribute('src', `/assets/images/${selectedHorn}.svg`);
     audio.setAttribute('src', horn_sound);
   }
 
@@ -32,13 +32,13 @@ function init() {
     // Update the volume icon displayed on the page
     const volumeIcon = document.querySelector('#volume-controls img');
     if (selectedVolume == 0) {
-      volumeIcon.setAttribute('src', `./assets/icons/volume-level-0.svg`);
+      volumeIcon.setAttribute('src', `/assets/icons/volume-level-0.svg`);
     } else if (selectedVolume >= 1 && selectedVolume <= 33) {
-      volumeIcon.setAttribute('src', `./assets/icons/volume-level-1.svg`);
+      volumeIcon.setAttribute('src', `/assets/icons/volume-level-1.svg`);
     } else if (selectedVolume >= 34 && selectedVolume <= 66) {
-      volumeIcon.setAttribute('src', `./assets/icons/volume-level-2.svg`);
+      volumeIcon.setAttribute('src', `/assets/icons/volume-level-2.svg`);
     } else {
-      volumeIcon.setAttribute('src', `./assets/icons/volume-level-3.svg`);
+      volumeIcon.setAttribute('src', `/assets/icons/volume-level-3.svg`);
     }
   }
 
