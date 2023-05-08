@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded', function() {
     var synth = window.speechSynthesis;
     var voice_select = document.querySelector("#voice-select");
     var button = document.querySelector("button");
-    var text_to_speak = document.querySelector("#text_to_speak");
+    var text_to_speak = document.querySelector("#tex-to-speak");
     var smilling = document.querySelector("img[src='./assets/images/smiling.png']");
     var open_mouth = document.querySelector("img[src='./assets/images/smiling-open.png']");
     var voices = [];
