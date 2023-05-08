@@ -1,19 +1,19 @@
 window.addEventListener('DOMContentLoaded', function() {
     var synth = window.speechSynthesis;
-    var voiceSelect = document.querySelector("#voice-select");
-    var speakBtn = document.querySelector("button");
-    var textToSpeak = document.querySelector("#text-to-speak");
-    var smilingFace = document.querySelector("img[src='./assets/images/smiling.png']");
-    var openMouthFace = document.querySelector("img[src='./assets/images/open-mouth.png']");
+    var voice_select = document.querySelector("#voice-select");
+    var button = document.querySelector("button");
+    var text_to_speak = document.querySelector("#text_to_speak");
+    var smilling = document.querySelector("img[src='./assets/images/smiling.png']");
+    var open_mouth = document.querySelector("img[src='./assets/images/open-mouth.png']");
     var voices = [];
   
     function populateVoiceList() {
       voices = synth.getVoices();
-      var voiceSelectInnerHTML = '';
+      var voice_selectInnerHTML = '';
       for (var i = 0; i < voices.length; i++) {
-        voiceSelectInnerHTML += '<option value="' + voices[i].name + '">' + voices[i].name + ' (' + voices[i].lang + ')</option>';
+        voice_selectInnerHTML += '<option value="' + voices[i].name + '">' + voices[i].name + ' (' + voices[i].lang + ')</option>';
       }
-      voiceSelect.innerHTML = voiceSelectInnerHTML;
+      voice_select.innerHTML = voice_selectInnerHTML;
     }
   
     populateVoiceList();
@@ -21,26 +21,26 @@ window.addEventListener('DOMContentLoaded', function() {
       synth.onvoiceschanged = populateVoiceList;
     }
   
-    speakBtn.addEventListener("click", function() {
-      if (synth.speaking || textToSpeak.value === "") {
+    button.addEventListener("click", function() {
+      if (synth.speaking || text_to_speak.value === "") {
         return;
       }
   
-      var utterThis = new SpeechSynthesisUtterance(textToSpeak.value);
+      var utterThis = new SpeechSynthesisUtterance(text_to_speak.value);
       for (var i = 0; i < voices.length; i++) {
-        if (voices[i].name === voiceSelect.value) {
+        if (voices[i].name === voice_select.value) {
           utterThis.voice = voices[i];
           break;
         }
       }
       synth.speak(utterThis);
   
-      smilingFace.style.display = "assets/images/smiling.png";
-      openMouthFace.style.display = "assets/images/open-mouth.png";
+      smilling.style.display = "assets/images/smiling.png";
+      open_mouth.style.display = "assets/images/open-mouth.png";
   
       utterThis.onend = function(event) {
-        smilingFace.style.display = "assets/images/smiling.png";
-        openMouthFace.style.display = "assets/images/open-mouth.png";
+        smilling.style.display = "assets/images/smiling.png";
+        open_mouth.style.display = "assets/images/open-mouth.png";
       };
   
       utterThis.onerror = function(event) {
