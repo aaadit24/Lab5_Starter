@@ -22,7 +22,7 @@ function init() {
     const horn_image = document.querySelector('section img');
     const horn_sound = `./assets/audio/${selectedHorn}.mp3`;
 
-    horn_image.setAttribute('src', `./assets/images/air-horn.svg`);
+    horn_image.setAttribute('src', `./assets/images/${selectedHorn}.svg`);
     audio.setAttribute('src', horn_sound);
   }
 
